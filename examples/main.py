@@ -1,5 +1,8 @@
 import justpy as jp
 
+web = jp.QuasarPage(tailwind=True) # we can use quasar webpage which has better styles and can make tailwind to true.
+#QBtn Quasar button
+
 
 
 def home():
