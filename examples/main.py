@@ -36,5 +36,5 @@ def mouse_entered(widget,msg):
 def mouse_left(widget ,msg):
     widget.text = "mouse left the house"
 jp.Route("/",home)
-jp.justpy()
+jp.justpy(port=3003)
 
