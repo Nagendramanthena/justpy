@@ -4,8 +4,22 @@ import justpy as jp
 
 def home():
     web = jp.WebPage()
-    jp.Div(a=web,text="hello world")
-    jp.Div(a=web,text="another div")
+    div = jp.Div(a=web,classes="bg-gray-200 h-screen border border-black")
+
+    div1 = jp.Div(a=div,classes="grid grid-cols-3 gap-4 p-4 ")
+    in_1 = jp.Input(a=div1,placeholder="first value" ,
+             classes="form-input")
+    in_2 =jp.Input(a=div1,placeholder="Enter second value",classes="form-input ")
+    d = jp.Div(text="result goes here...",a=div1,classes="text-gray-600")
+    jp.Div(text="Just another div",a=div1,classes="text-gray-600")
+    jp.Div(text="Yet another div",a=div1,classes="text-gray-600")
+
+    div2 = jp.Div(a=div,classes="grid grid-cols-2 gap-4 p-4")
+    # jp.Button(a=div2,text="Calculate",click=sumup,in1 = in_1,in2 = in_2,d1=d,classes="border border-blue-500 "
+                                            # "m-2 py-1 px-4 rounded text-blue-600 hover:bg-red-500 hover:text-white") #if you want to split leave space before oherwise we will not get the results
+
+    # jp.Div(a=div2,text="cool interactive div",mouseenter = mouse_entered,mouseleave = mouse_left, classes="hover:bg-green-500 text-white bg-red-500  border border-gray-300 m-2 p-4")
     return web
-jp.Route("/",home)
-jp.justpy()
+
+
+
