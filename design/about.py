@@ -1,5 +1,7 @@
 import justpy as jp
 
+#About(jp.QusarPage) ____ inheritance and pass self instead of wp varialbe
+
 class About:
     path = "/about"
 
