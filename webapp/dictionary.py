@@ -1,6 +1,7 @@
 import justpy as jp
 
 import defintion
+import requests
 
 
 class Dictionary:
@@ -47,8 +48,10 @@ class Dictionary:
 
     @staticmethod
     def get_definiton(widget,msg):
-        defined = defintion.Definition(widget.value).getdefiniton()
-        widget.output_div .text= "".join(defined)
+        req = requests.get(f"http://127.0.0.1:8003/api?word={widget.value}")
+        data = req.json()
+
+        widget.output_div.text= " ".join(data['definition'])
 
     @staticmethod
     def move_drawer(widget, msg):
